@@ -5,12 +5,39 @@ import Multiple from '../assets/Multiple.jpg'
 import Red from '../assets/Red.jpg'
 import Green from '../assets/Green.jpg'
 import Orange from '../assets/Orange.jpg'
-import AliceCarousel from 'react-alice-carousel';
-import "react-alice-carousel/lib/alice-carousel.css";
-import '../Css/app.css'
+import { FC } from "react"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { useRef } from "react"
 
 
-const Adventure: React.FC = () => {
+const Adventure: FC = () => {
+
+    const sliderRef = useRef<Slider>(null);
+
+    // Function to reset slider when reaching the end
+    const handleAfterChange = (currentIndex: number) => {
+    const totalSlides = 6; // Total number of actual slides
+    if (currentIndex === totalSlides) {
+      sliderRef.current?.slickGoTo(0, false); // Jump back to the start without animation
+    }
+  };
+
+    const settings = {
+      dots: false,
+      infinite: true,
+      adaptiveHeight: true,
+      speed: 3000,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      centerMode: true,
+      autoplaySpeed: 0,
+      cssEase: 'ease-in-out',
+      pauseOnHover: false,
+      afterChange: handleAfterChange,
+    };
 
     const sliderImages = [
         {
@@ -34,24 +61,36 @@ const Adventure: React.FC = () => {
           alt: 'Image 3',
         },
       ];
-
-      const responsive = {
-        0: { items: 1 },
-        568: { items: 2 },
-        1024: { items: 3 },
-      };
     
       const items = [
-        <img src={sliderImages[0].source} className="sliderimg"/>,
-        <img src={sliderImages[1].source} className="sliderimg"/>,
-        <img src={sliderImages[2].source} className="sliderimg"/>,
-        <img src={sliderImages[3].source} className="sliderimg"/>,
-        <img src={sliderImages[4].source} className="sliderimg"/>,
+          
+          <div>
+            <img src={sliderImages[0].source} className="sliderimg"/>
+          </div>,
+          
+          <div>
+            <img src={sliderImages[1].source} className="sliderimg"/>
+          </div>,
+          
+          <div>
+            <img src={sliderImages[2].source} className="sliderimg"/>
+          </div>,
+          
+          <div>
+            <img src={sliderImages[3].source} className="sliderimg"/>
+          </div>,
+          
+          <div>
+            <img src={sliderImages[4].source} className="sliderimg"/>
+          </div>
+          
       ]
+
+      const extended =[...items, ...items, ...items]
 
   return (
     // container for content
-    <Box sx={{background: '#FBF7FD', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', height: '1225px', padding: '50px'}}>
+    <Box sx={{background: '#FBF7FD', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', height: 'auto', padding: '50px'}}>
         
         <Box sx={{padding: '20px 0 30px'}}>
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: '40px', border: '1px solid', borderRadius: '8px', width: '364px', color: '#FF5C00',}}>
@@ -88,7 +127,7 @@ const Adventure: React.FC = () => {
         </Box>
 
         {/* wrapper for smaller font and avaters */}
-        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '5px 0 20px'}}>
+        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '5px 0 20px', zIndex: '20'}}>
             
             <Typography sx={{fontWeight: 400, fontSize: '20px', lineHeight: '30px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                 Trusted by Adventurers Worldwide
@@ -106,21 +145,21 @@ const Adventure: React.FC = () => {
 
         </Box>
 
-        {/* container for image slider*/}
-        <div className="carousel-container" style={{height: '100%', width: '100%',}}>
-
-            <AliceCarousel items={items} responsive={responsive} infinite autoPlayInterval={3000} autoPlay>
-                
-                {items.map((item, index) => (
-                    <div key={index} style={{ perspective: '1000px', position: 'relative' }}>
+        {/* container for image slider */}
+        <div className="slider-container">
+        
+          <Slider ref={sliderRef} {...settings}>  
+          
+            {extended.map((item, index) => (
+                    <div key={index} style={{display: 'flex'}}>
                         {item}
                     </div>
                 ))}
-            
-            </AliceCarousel>
-        
+
+          </Slider>
+
         </div>
-    
+
     </Box>
   )
 }

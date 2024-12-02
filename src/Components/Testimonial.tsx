@@ -27,7 +27,7 @@ const Testimonial = () => {
             {/* card one */}
             <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#FFFFFF'}}>
                 
-                <Rating defaultValue={5}></Rating>
+                <Rating defaultValue={5} sx={{color: '#FF5C00'}}></Rating>
                 {/* upper text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', py: '30px'}}>
                     <Typography sx={{fontWeight: 700, fontSize: '20px', lineHeight: '28px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
@@ -58,11 +58,11 @@ const Testimonial = () => {
             {/* card two */}
             <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#FFFFFF'}}>
                 
-                <Rating defaultValue={5}></Rating>
+                <Rating defaultValue={5} sx={{color: '#FF5C00'}}></Rating>
                 {/* upper text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', py: '30px'}}>
                     <Typography sx={{fontWeight: 700, fontSize: '20px', lineHeight: '28px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
-                        "These training videos inspired my kids to be brave!"
+                        "We learned teamwork and resilience as a family!"
                     </Typography>
                 </Box>
 
@@ -89,11 +89,11 @@ const Testimonial = () => {
             {/* card three */}
             <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#FFFFFF'}}>
                 
-                <Rating defaultValue={5}></Rating>
+                <Rating defaultValue={5} sx={{color: '#FF5C00'}}></Rating>
                 {/* upper text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', py: '30px'}}>
                     <Typography sx={{fontWeight: 700, fontSize: '20px', lineHeight: '28px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
-                        "These training videos inspired my kids to be brave!"
+                        "These videos are a game changer for our kids!"
                     </Typography>
                 </Box>
 
