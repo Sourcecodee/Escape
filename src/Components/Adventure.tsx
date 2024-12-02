@@ -54,34 +54,34 @@ const Adventure: FC = () => {
         },
         {
           source: Green,
-          alt: 'Image 3',
+          alt: 'Image 4',
         },
         {
           source: Red,
-          alt: 'Image 3',
+          alt: 'Image 5',
         },
       ];
     
       const items = [
           
           <div>
-            <img src={sliderImages[0].source} className="sliderimg"/>
+            <img src={sliderImages[0].source} alt={sliderImages[0].alt} className="sliderimg"/>
           </div>,
           
           <div>
-            <img src={sliderImages[1].source} className="sliderimg"/>
+            <img src={sliderImages[1].source} alt={sliderImages[1].alt} className="sliderimg"/>
           </div>,
           
           <div>
-            <img src={sliderImages[2].source} className="sliderimg"/>
+            <img src={sliderImages[2].source} alt={sliderImages[2].alt}className="sliderimg"/>
           </div>,
           
           <div>
-            <img src={sliderImages[3].source} className="sliderimg"/>
+            <img src={sliderImages[3].source} alt={sliderImages[3].alt}className="sliderimg"/>
           </div>,
           
           <div>
-            <img src={sliderImages[4].source} className="sliderimg"/>
+            <img src={sliderImages[4].source} alt={sliderImages[4].alt} className="sliderimg"/>
           </div>
           
       ]
@@ -150,7 +150,7 @@ const Adventure: FC = () => {
         
           <Slider ref={sliderRef} {...settings}>  
           
-            {extended.map((item, index) => (
+                {extended.map((item, index) => (
                     <div key={index} style={{display: 'flex'}}>
                         {item}
                     </div>
