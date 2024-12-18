@@ -11,26 +11,26 @@ import Carter from '../assets/Carter.jpg'
 
 const Team = () => {
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-strart', alignItems: 'center', gap: '2rem', height: 'auto', backgroundColor: '#FFFFFF', padding: '150px 50px 10px'}}>
+    <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-strart', alignItems: 'center', gap: '2rem', height: 'auto', backgroundColor: '#FFFFFF', padding: {xs: '60px 30px 10px', md: '150px 50px 10px'}}}>
         
         {/* container for text */}
         <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column', height: '100%', width: '100%'}}>
             
-            {/* wrapper for elevate */}
-            <Box sx={{display: 'flex', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: '40px', border: '1px solid', borderRadius: '8px', width: '80px', color: '#FF5C00', mb: '15px'}}>
+            {/* wrapper for team */}
+            <Box sx={{display: 'flex', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: '40px', border: '1px solid', borderRadius: {xs: '4px', md: '8px'}, width: '80px', color: '#FF5C00', mb: '15px'}}>
                 <Typography sx={{fontWeight: 500, fontSize: '18px', lineHeight: '24px', fontFamily: 'inter', width: '100%', textAlign: 'center'}}>Team</Typography>
             </Box>
 
-            {/* container for master your climb */}
+            {/* container for our team */}
             <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', pt: '20px'}}>
-                <Typography sx={{fontWeight: 700, fontSize: '48px', lineHeight: '57.6px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+                <Typography sx={{fontWeight: 700, fontSize: {xs: '28px', md: '48px'}, lineHeight: {xs:'40px', md:'57.6px'}, fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                     Our Team
                 </Typography>
             </Box>
 
             {/* container for smaller texts */}
-            <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', py: '30px'}}>
-                <Typography sx={{fontWeight: 400, fontSize: '18px', lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+            <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', py:{xs: '15px', md: '30px'}}}>
+                <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                     Meet the passionate individuals behind Escape Global.
                 </Typography>
             </Box>
@@ -38,29 +38,29 @@ const Team = () => {
         </Box>
 
         {/* Box for first set of team */}
-        <Box sx={{display: 'flex', justifyContent: 'space-between', gap: '2.5rem', alignItems: 'center', mt: '40px'}}>
+        <Box sx={{display: 'flex', flexDirection: {xs: 'column',md: 'row'}, justifyContent: 'space-between', gap: {xs: '1rem', md: '2.5rem'}, alignItems: 'center', mt: {xs: '20px', md: '40px'}}}>
             {/* first image */}
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '600px', width: '48%'}}>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '600px', width: {xs: '100%', md: '48%'}}}>
                 {/* image */}
                 <img src={Jacob} alt="Jacob" style={{width: '100%', height: '100%'}}/>
                 
                 {/* avater name */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px 0 2px'}}>
-                    <Typography sx={{fontWeight: 600, fontSize: '24px', lineHeight: '36px', fontFamily: 'inter', width: '80%', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 600, fontSize: {xs: '18px', md:'24px'}, lineHeight: '36px', fontFamily: 'inter', width: '80%', textAlign: 'center', color: '#1E1E1E'}}>
                         Jacob Jones 
                     </Typography>
                 </Box>
 
                 {/* position text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0 20px'}}>
-                    <Typography sx={{fontWeight: 400, fontSize: '18px', lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                        Team Leader
                     </Typography>
                 </Box>
                 
                 {/* description text */}
                 <Box sx={{width: '90%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0'}}>
-                    <Typography sx={{fontWeight: 400, fontSize: '18px', lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                        Jacob  inspires the team with his adventurous spirit and dedication to mountaineering.
                     </Typography>
                 </Box>
@@ -93,21 +93,21 @@ const Team = () => {
                 
                 {/* avater name */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px 0 2px'}}>
-                    <Typography sx={{fontWeight: 600, fontSize: '24px', lineHeight: '36px', fontFamily: 'inter', width: '80%', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 600, fontSize: {xs: '18px', md: '24px'}, lineHeight: '36px', fontFamily: 'inter', width: '80%', textAlign: 'center', color: '#1E1E1E'}}>
                         Aika Cheng
                     </Typography>
                 </Box>
 
                 {/* position text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0 20px'}}>
-                    <Typography sx={{fontWeight: 400, fontSize: '18px', lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                         Content Creator
                     </Typography>
                 </Box>
                 
                 {/* description text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0'}}>
-                    <Typography sx={{fontWeight: 400, fontSize: '18px', lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                         Aika crafts engaging stories that resonate with our audience's love for adventure.
                     </Typography>
                 </Box>
@@ -139,21 +139,21 @@ const Team = () => {
                 
                 {/* avater name */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px 0 2px'}}>
-                    <Typography sx={{fontWeight: 600, fontSize: '24px', lineHeight: '36px', fontFamily: 'inter', width: '80%', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 600, fontSize: {xs: '18px', md: '24px'}, lineHeight: '36px', fontFamily: 'inter', width: '80%', textAlign: 'center', color: '#1E1E1E'}}>
                         Mike Johnson 
                     </Typography>
                 </Box>
 
                 {/* position text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0 20px'}}>
-                    <Typography sx={{fontWeight: 400, fontSize: '18px', lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                         Video Producer
                     </Typography>
                 </Box>
                 
                 {/* description text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0'}}>
-                    <Typography sx={{fontWeight: 400, fontSize: '18px', lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+                    <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '27px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                         Mike brings our mountaineering training videos to life with his creative vision.
                     </Typography>
                 </Box>
@@ -181,9 +181,9 @@ const Team = () => {
         </Box>
         
         {/* Box for second set of team */}
-        <Box sx={{display: 'flex', justifyContent: 'space-between', gap: '2.5rem', alignItems: 'center', mt: '20px',}}>
+        <Box sx={{display: 'flex', flexDirection: {xs: 'column',md: 'row'}, justifyContent: 'space-between', gap: {xs: '1rem', md: '2.5rem'}, alignItems: 'center', mt: '20px',}}>
             {/* first image */}
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '600px'}}>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '600px', width: {xs: '100%', md: '48%'}}}>
                 {/* image */}
                 <img src={Emily} alt="Emily" style={{width: '100%', height: '100%'}}/>
                 

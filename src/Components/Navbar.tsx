@@ -7,15 +7,15 @@ const Navbar = () => {
   return (
     <div>
         {/* container for navbar */}
-        <Box sx={{height: '108px', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#FBF7FD', borderBottom: '1px solid #CACACA'}}>
+        <Box sx={{height: {xs: '60px', md: '108px'}, width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#FBF7FD', borderBottom: '1px solid #CACACA'}}>
             
             {/* container for logo */}
-            <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '60px'}}>
+            <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: {xs:'20px', md: '60px'}}}>
                 <img src={Logo} alt='Company Logo' style={{width: '50px'}}/>
             </Box>
             
             {/* container for nav links */}
-            <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', ml: '110px'}}>
+            <Box sx={{display: {xs: 'none', md:'flex'}, justifyContent: 'space-between', alignItems: 'center', ml: '110px'}}>
                 
                 <Button sx={{textTransform: 'none', borderRadius: '12px', color: '#FF5C00'}}>
                     <Typography sx={{fontWeight: 500, fontSize: '18px', lineHeight: '24px', fontFamily: 'inter', textDecoration: 'underline'}}>Home</Typography>
@@ -36,14 +36,14 @@ const Navbar = () => {
             </Box>
 
             {/* container for buttons */}
-            <Box sx={{display: 'flex', gap: '6px', padding: '60px'}}>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', padding: {xs: '20px', md:'60px'}}}>
                 
-                <Button variant="outlined" sx={{borderColor: '#FF5C00', textTransform: 'none', height: '60px', borderRadius: '12px', width: '101px', color: '#FF5C00'}}>
+                <Button variant="outlined" sx={{borderColor: '#FF5C00', textTransform: 'none', height: {xs: '40px', md:'60px'}, borderRadius: '12px', width: '101px', color: '#FF5C00', display: {xs: 'none', md: 'flex'}}}>
                     <Typography sx={{fontWeight: 600, fontSize: '20px', lineHeight: '24px', fontFamily: 'inter'}}>Call</Typography>
                 </Button>
                 
-                <Button variant="contained" sx={{background: '#FF5C00', textTransform: 'none', height: '60px', borderRadius: '12px', width: '140px', color: '#FBF7FD'}}>
-                    <Typography sx={{fontWeight: 600, fontSize: '20px', lineHeight: '24px', fontFamily: 'inter'}}>Sign Up</Typography>
+                <Button variant="contained" sx={{background: '#FF5C00', textTransform: 'none', height: {xs: '40px', md:'60px'}, borderRadius: '12px', width: {xs: 'auto', md:'140px'}, color: '#FBF7FD'}}>
+                    <Typography sx={{fontWeight: 600, fontSize: {xs: '14px', md:'20px'}, lineHeight: '24px', fontFamily: 'inter'}}>Sign Up</Typography>
                 </Button>
             
             </Box>

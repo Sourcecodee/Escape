@@ -93,14 +93,14 @@ const Adventure: FC = () => {
     <Box sx={{background: '#FBF7FD', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', height: 'auto', padding: '50px'}}>
         
         <Box sx={{padding: '20px 0 30px'}}>
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: '40px', border: '1px solid', borderRadius: '8px', width: '364px', color: '#FF5C00',}}>
-                <Typography sx={{fontWeight: 500, fontSize: '18px', lineHeight: '24px', fontFamily: 'inter', width: '100%', textAlign: 'center'}}>Empowering Adventurers of Tomorrow</Typography>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: '40px', border: '1px solid', borderRadius: '8px', width: {xs:'280px', md:'364px'}, px: '10px', color: '#FF5C00',}}>
+                <Typography sx={{fontWeight: 500, fontSize: {xs: '14px', md:'18px'}, lineHeight: '24px', fontFamily: 'inter', width: '100%', textAlign: 'center'}}>Empowering Adventurers of Tomorrow</Typography>
             </Box>
         </Box>
 
         {/* container for embrace adventures */}
         <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
-            <Typography sx={{fontWeight: 700, fontSize: '60px', lineHeight: '72px', fontFamily: 'inter', width: '70%', textAlign: 'center'}}>
+            <Typography sx={{fontWeight: 700, fontSize: {xs: '32px', md: '60px'}, lineHeight: {xs:'44px', md:'72px'}, fontFamily: 'inter', width: {xs: '90%', md: '70%'}, textAlign: 'center'}}>
                 Conquer Your Fears, Embrace the
                 <span style={{color: '#FF5C00'}}> Adventure</span>
             </Typography>
@@ -108,13 +108,13 @@ const Adventure: FC = () => {
 
         {/* container for smaller texts */}
         <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '30px'}}>
-            <Typography sx={{fontWeight: 400, fontSize: '20px', lineHeight: '32px', fontFamily: 'inter', width: '65%', textAlign: 'center', color: '#1E1E1E'}}>
+            <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '32px', fontFamily: 'inter', width: {xs: '90%', md: '65%'}, textAlign: 'center', color: '#1E1E1E'}}>
                 Join us in the exhilarating world of mountaineering, where bravery meets kindness. Our training videos inspire both parents and children to push their limits and explore the great outdoors together.
             </Typography>
         </Box>
 
         {/* container for buttons */}
-        <Box sx={{display: 'flex', gap: '28px', padding: '10px 0 20px'}}>
+        <Box sx={{display: {xs: 'none', md: 'flex'}, gap: '28px', padding: '10px 0 20px'}}>
 
              <Button variant="contained" sx={{background: '#FF5C00', textTransform: 'none', height: '72px', borderRadius: '12px', width: '287px', color: '#FBF7FD'}}>
                 <Typography sx={{fontWeight: 600, fontSize: '20px', lineHeight: '24px', fontFamily: 'inter'}}>Call Us for More Info</Typography>
@@ -129,7 +129,7 @@ const Adventure: FC = () => {
         {/* wrapper for smaller font and avaters */}
         <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '5px 0 20px', zIndex: '20'}}>
             
-            <Typography sx={{fontWeight: 400, fontSize: '20px', lineHeight: '30px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+            <Typography sx={{fontWeight: 400, fontSize: {xs: '16px', md: '20px'}, lineHeight: '30px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
                 Trusted by Adventurers Worldwide
             </Typography>
 
@@ -139,7 +139,7 @@ const Adventure: FC = () => {
                     <img src={Avaters} alt="Avaters" style={{height: '100%', width: '100%'}}/>
                 </Box>
                 
-                <Typography sx={{fontWeight: 400, fontFamily: 'Inter', fontSize: '20px', lineHeight: '30px', color: '#686868'}}>+56</Typography>
+                <Typography sx={{fontWeight: 400, fontFamily: 'Inter', fontSize: {xs: '16px', md: '20px'}, lineHeight: '30px', color: '#686868'}}>+56</Typography>
            
             </Box>
 
