@@ -6,6 +6,8 @@ import Insta from '../assets/Insta.png'
 import Youtube from '../assets/Youtube.png'
 import Facebook from '../assets/Facebook.png'
 
+// ..
+
 const Footer = () => {
   return (
     <div style={{width: '100%', height: '100%'}}>
