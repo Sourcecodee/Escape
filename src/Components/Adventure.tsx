@@ -93,7 +93,7 @@ const Adventure: FC = () => {
       const extended =[...items, ...items, ...items]
 
   return (
-    <Box sx={{background: '#FBF7FD', display: 'flex', flexDirection: 'column', alignItems: 'center', height: 'auto', padding: {xs: '28px 16px 20px', md: '48px 32px 24px'}, overflow: 'hidden'}}>
+    <Box sx={{background: '#FBF7FD', display: 'flex', flexDirection: 'column', alignItems: 'center', height: {xs:'900px', md:'1000px'}, padding: {xs: '28px 16px 12px', md: '48px 32px 16px'}, overflow: 'hidden'}}>
         
         <Box sx={{padding: {xs: '8px 0 18px', md: '12px 0 22px'}, width: '100%', display: 'flex', justifyContent: 'center'}}>
             <Box sx={{display: 'inline-flex', justifyContent: 'center', alignItems: 'center', border: '1px solid #FF5C00', borderRadius: '999px', px: {xs: 2, md: 2.5}, py: 1, color: '#FF5C00', background: 'rgba(255,92,0,0.06)'}}>

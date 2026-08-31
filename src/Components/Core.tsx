@@ -5,7 +5,7 @@ import Mountain from '../assets/Mountain.jpg'
 
 const Core = () => {
   return (
-    <Box sx={{height: 'auto', background: '#FFFFFF', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: {xs: '32px 16px', md: '56px 32px'}, overflow:'hidden'}}>
+    <Box sx={{height: 'auto', background: '#FFFFFF', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: {xs: '20px 16px', md: '32px 32px'}, overflow:'hidden'}}>
         
         {/* wrapper for empower */}
         <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: {xs: 'auto', md: '40px'}, border: '1px solid', borderRadius: {xs: '4px', md: '8px'}, width: '113px', color: '#FF5C00', mt: '20px'}}>
