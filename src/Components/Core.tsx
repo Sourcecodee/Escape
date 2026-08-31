@@ -5,8 +5,7 @@ import Mountain from '../assets/Mountain.jpg'
 
 const Core = () => {
   return (
-    // Container for core values
-    <Box sx={{height: 'auto', background: '#FFFFFF', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', padding: {xs: '25px', md: '50px'},}}>
+    <Box sx={{height: 'auto', background: '#FFFFFF', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: {xs: '32px 16px', md: '56px 32px'}, overflow:'hidden'}}>
         
         {/* wrapper for empower */}
         <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: {xs: 'auto', md: '40px'}, border: '1px solid', borderRadius: {xs: '4px', md: '8px'}, width: '113px', color: '#FF5C00', mt: '20px'}}>
@@ -27,13 +26,12 @@ const Core = () => {
             </Typography>
         </Box>
 
-        {/* container for three images */}
-        <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, justifyContent: 'space-evenly', alignItems: 'center', height: {xs: 'auto', md: '435px'}, gap: {xs: '0.5rem', md: '1rem'}}}>
+        <Box sx={{display: 'grid', gridTemplateColumns: {xs: '1fr', md: 'repeat(3,1fr)'}, gap: {xs: 2, md: 2.5}, width: '100%', maxWidth: 1240, alignItems: 'start'}}>
             
-            {/* first image */}
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '100%', padding: '12px'}}>
-                {/* image */}
-                <img src={Family} alt="family photo" style={{width: '100%', height: '100%'}}/>
+            <Box sx={{display: 'flex', flexDirection: 'column', background:'#FBF7FD', border:'1px solid #F0E6F5', borderRadius: 3, overflow:'hidden'}}>
+                <Box sx={{width:'100%', aspectRatio: '4/3', overflow:'hidden'}}>
+                  <img src={Family} alt="family photo" style={{width: '100%', height: '100%', objectFit:'cover'}}/>
+                </Box>
                 
                 {/* fisrt text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: {xs: '13px', md: '20px'}}}>
@@ -51,10 +49,10 @@ const Core = () => {
 
             </Box>
 
-            {/* second image */}
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '100%', padding: '12px'}}>
-                {/* image */}
-                <img src={Bridge} alt="bridge photo" style={{width: '100%', height: '100%'}}/>
+            <Box sx={{display: 'flex', flexDirection: 'column', background:'#FBF7FD', border:'1px solid #F0E6F5', borderRadius: 3, overflow:'hidden'}}>
+                <Box sx={{width:'100%', aspectRatio: '4/3', overflow:'hidden'}}>
+                  <img src={Bridge} alt="bridge photo" style={{width: '100%', height: '100%', objectFit:'cover'}}/>
+                </Box>
                 
                 {/* fisrt text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: {xs: '13px', md: '20px'}}}>
@@ -72,10 +70,10 @@ const Core = () => {
 
             </Box>
 
-            {/* third image */}
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '100%', padding: '12px'}}>
-                {/* image */}
-                <img src={Mountain} alt="mountain photo" style={{width: '100%', height: '100%'}}/>
+            <Box sx={{display: 'flex', flexDirection: 'column', background:'#FBF7FD', border:'1px solid #F0E6F5', borderRadius: 3, overflow:'hidden'}}>
+                <Box sx={{width:'100%', aspectRatio: '4/3', overflow:'hidden'}}>
+                  <img src={Mountain} alt="mountain photo" style={{width: '100%', height: '100%', objectFit:'cover'}}/>
+                </Box>
                 
                 {/* fisrt text */}
                 <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: {xs: '13px', md: '20px'}}}>
@@ -95,13 +93,10 @@ const Core = () => {
 
         </Box>
 
-        {/* wrapper for learn more*/}
-        <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
-            
-            <Button variant="outlined" sx={{borderColor: '#FF5C00', textTransform: 'none', height: {xs: 'auto', md: '60px'}, borderRadius: {xs: '6px', md: '12px'}, color: '#FF5C00', mt: {xs: '20px', md:'100px'}}}>
-                <Typography sx={{fontWeight: 600, fontSize: {xs: '18px', md: '24px'}, lineHeight: {xs: '20px', md: '36px'}, width: {xs: '100px', md: '171px'}}}>Learn More</Typography>
+        <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width:'100%', mt: {xs: 3, md: 4}}}>
+            <Button variant="outlined" sx={{borderColor: '#FF5C00', textTransform: 'none', height: 44, borderRadius: '12px', px: 3, color: '#FF5C00', background:'#fff', mx:'auto', display:'flex'}}>
+                <Typography sx={{fontWeight: 700, fontSize: '14px', fontFamily:'inter'}}>Learn More</Typography>
             </Button>
-
         </Box>
 
 

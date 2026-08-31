@@ -27,16 +27,20 @@ const Adventure: FC = () => {
     const settings = {
       dots: false,
       infinite: true,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       speed: 3000,
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
       centerMode: true,
       autoplaySpeed: 0,
-      cssEase: 'ease-in-out',
+      cssEase: 'linear',
       pauseOnHover: false,
       afterChange: handleAfterChange,
+      responsive: [
+        { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: true } },
+        { breakpoint: 640, settings: { slidesToShow: 1, centerMode: true, centerPadding: '18px' } },
+      ]
     };
 
     const sliderImages = [
@@ -89,57 +93,52 @@ const Adventure: FC = () => {
       const extended =[...items, ...items, ...items]
 
   return (
-    // container for content
-    <Box sx={{background: '#FBF7FD', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', height: 'auto', padding: '50px'}}>
+    <Box sx={{background: '#FBF7FD', display: 'flex', flexDirection: 'column', alignItems: 'center', height: 'auto', padding: {xs: '28px 16px 20px', md: '48px 32px 24px'}, overflow: 'hidden'}}>
         
-        <Box sx={{padding: '20px 0 30px'}}>
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderColor: '#FF5C00', textTransform: 'none', height: '40px', border: '1px solid', borderRadius: '8px', width: {xs:'280px', md:'364px'}, px: '10px', color: '#FF5C00',}}>
-                <Typography sx={{fontWeight: 500, fontSize: {xs: '14px', md:'18px'}, lineHeight: '24px', fontFamily: 'inter', width: '100%', textAlign: 'center'}}>Empowering Adventurers of Tomorrow</Typography>
+        <Box sx={{padding: {xs: '8px 0 18px', md: '12px 0 22px'}, width: '100%', display: 'flex', justifyContent: 'center'}}>
+            <Box sx={{display: 'inline-flex', justifyContent: 'center', alignItems: 'center', border: '1px solid #FF5C00', borderRadius: '999px', px: {xs: 2, md: 2.5}, py: 1, color: '#FF5C00', background: 'rgba(255,92,0,0.06)'}}>
+                <Typography sx={{fontWeight: 600, fontSize: {xs: '12px', md:'13px'}, letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: 'inter', textAlign: 'center'}}>Empowering Adventurers of Tomorrow</Typography>
             </Box>
         </Box>
 
-        {/* container for embrace adventures */}
         <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
-            <Typography sx={{fontWeight: 700, fontSize: {xs: '32px', md: '60px'}, lineHeight: {xs:'44px', md:'72px'}, fontFamily: 'inter', width: {xs: '90%', md: '70%'}, textAlign: 'center'}}>
+            <Typography sx={{fontWeight: 800, fontSize: {xs: '30px', sm: '36px', md: '56px'}, lineHeight: {xs:'36px', sm:'40px', md:'64px'}, fontFamily: 'inter', maxWidth: {xs: '100%', md: '760px'}, textAlign: 'center', letterSpacing:'-0.03em'}}>
                 Conquer Your Fears, Embrace the
                 <span style={{color: '#FF5C00'}}> Adventure</span>
             </Typography>
         </Box>
 
-        {/* container for smaller texts */}
-        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '30px'}}>
-            <Typography sx={{fontWeight: 400, fontSize: {xs: '14px', md:'18px'}, lineHeight: '32px', fontFamily: 'inter', width: {xs: '90%', md: '65%'}, textAlign: 'center', color: '#1E1E1E'}}>
+        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', pt: {xs: 2, md: 2.5}, pb: 1}}>
+            <Typography sx={{fontWeight: 400, fontSize: {xs: '14.5px', md:'17px'}, lineHeight: {xs:'24px', md:'28px'}, fontFamily: 'inter', maxWidth: {xs: '100%', md: '680px'}, textAlign: 'center', color: '#2b2b2b'}}>
                 Join us in the exhilarating world of mountaineering, where bravery meets kindness. Our training videos inspire both parents and children to push their limits and explore the great outdoors together.
             </Typography>
         </Box>
 
-        {/* container for buttons */}
-        <Box sx={{display: {xs: 'none', md: 'flex'}, gap: '28px', padding: '10px 0 20px'}}>
+        <Box sx={{display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, gap: 1.25, pt: 2.5, width: {xs:'100%', sm:'auto'}, maxWidth: 480, mx: 'auto', justifyContent:'center', alignItems:'center'}}>
 
-             <Button variant="contained" sx={{background: '#FF5C00', textTransform: 'none', height: '72px', borderRadius: '12px', width: '287px', color: '#FBF7FD'}}>
-                <Typography sx={{fontWeight: 600, fontSize: '20px', lineHeight: '24px', fontFamily: 'inter'}}>Call Us for More Info</Typography>
+             <Button variant="contained" sx={{background: '#FF5C00', textTransform: 'none', height: 44, borderRadius: '12px', px: 2.5, color: '#FBF7FD', boxShadow: 'none', '&:hover':{background:'#E65300'}, fontWeight: 700, width: {xs:'100%', sm:'auto'}, maxWidth: {xs: 280, sm: 'none'}, mx: {xs:'auto', sm:0}}}>
+                <Typography sx={{fontWeight: 700, fontSize: '14px', fontFamily: 'inter', whiteSpace:'nowrap'}}>Call Us for More Info</Typography>
             </Button>    
             
-            <Button variant="outlined" sx={{borderColor: '#FF5C00', textTransform: 'none', height: '72px', borderRadius: '12px', width: '235px', color: '#FF5C00'}}>
-                <Typography sx={{fontWeight: 600, fontSize: '20px', lineHeight: '24px', fontFamily: 'inter'}}>Learn More</Typography>
+            <Button variant="outlined" sx={{borderColor: '#FF5C00', textTransform: 'none', height: 44, borderRadius: '12px', px: 2.5, color: '#FF5C00', background: '#fff', fontWeight: 700, width: {xs:'100%', sm:'auto'}, maxWidth: {xs: 280, sm: 'none'}, mx: {xs:'auto', sm:0}}}>
+                <Typography sx={{fontWeight: 700, fontSize: '14px', fontFamily: 'inter', whiteSpace:'nowrap'}}>Learn More</Typography>
             </Button>
         
         </Box>
 
-        {/* wrapper for smaller font and avaters */}
-        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '5px 0 20px', zIndex: '20'}}>
+        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', pt: 3, zIndex: 2}}>
             
-            <Typography sx={{fontWeight: 400, fontSize: {xs: '16px', md: '20px'}, lineHeight: '30px', fontFamily: 'inter', textAlign: 'center', color: '#1E1E1E'}}>
+            <Typography sx={{fontWeight: 600, fontSize: {xs: '13px', md: '14px'}, letterSpacing:'0.08em', textTransform:'uppercase', fontFamily: 'inter', textAlign: 'center', color: '#6b6b6b'}}>
                 Trusted by Adventurers Worldwide
             </Typography>
 
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1.2, mt: 1}}>
                 
-                <Box sx={{width: '200px', height: '60px', padding: '10px'}}>
-                    <img src={Avaters} alt="Avaters" style={{height: '100%', width: '100%'}}/>
+                <Box sx={{width: {xs: 160, md: 180}, height: 44, display:'flex', alignItems:'center'}}>
+                    <img src={Avaters} alt="Avaters" style={{height: '100%', width: '100%', objectFit:'contain'}}/>
                 </Box>
                 
-                <Typography sx={{fontWeight: 400, fontFamily: 'Inter', fontSize: {xs: '16px', md: '20px'}, lineHeight: '30px', color: '#686868'}}>+56</Typography>
+                <Typography sx={{fontWeight: 700, fontFamily: 'inter', fontSize: '14px', color: '#1E1E1E', background:'#fff', border:'1px solid #E8E0EC', borderRadius: 999, px:1.2, py:0.4}}>+56</Typography>
            
             </Box>
 

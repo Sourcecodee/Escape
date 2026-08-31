@@ -6,32 +6,26 @@ const Call = () => {
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#FFFFFF',}}>
         
-        <Box sx={{height: '413px', width: '100%', backgroundColor: '#FF5C00', padding : '50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <Box sx={{minHeight: {xs: 'auto', md: '380px'}, width: '100%', backgroundColor: '#FF5C00', padding : {xs: '36px 16px', md: '48px 32px'}, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
             
-            {/* container for text */}
-          <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '100%', width: '100%'}}>
+          <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', width: '100%', maxWidth: 720}}>
 
-            {/* container for get in touch climb */}
-            <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', pt: '10px'}}>
-                <Typography sx={{fontWeight: 700, fontSize: '48px', lineHeight: '57.6px', fontFamily: 'inter', textAlign: 'center', color: '#FBF7FD'}}>
+            <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', pt: 1}}>
+                <Typography sx={{fontWeight: 800, fontSize: {xs: '28px', md: '42px'}, lineHeight: {xs:'34px', md:'48px'}, fontFamily: 'inter', textAlign: 'center', color: '#FBF7FD', letterSpacing:'-0.02em'}}>
                   Get in Touch with Us
                 </Typography>
             </Box>
 
-            {/* container for smaller texts */}
-            <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', py: '30px'}}>
-                <Typography sx={{fontWeight: 400, fontSize: '20px', lineHeight: '30px', fontFamily: 'inter', textAlign: 'center', color: '#FBF7FD'}}>
+            <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', py: {xs: 1.5, md: 2}}}>
+                <Typography sx={{fontWeight: 400, fontSize: {xs: '15px', md:'17px'}, lineHeight: {xs:'24px', md:'28px'}, fontFamily: 'inter', textAlign: 'center', color: '#FFF7F0', maxWidth: 560}}>
                   Have questions? Our team is here to help you with all your mountaineering training needs.
                 </Typography>
             </Box>
 
-            {/* wrapper for call now*/}
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', mt: '20px'}}>
-                
-                <Button variant="outlined" sx={{borderColor: '#FF5C00', textTransform: 'none', height: '60px', borderRadius: '10px', color: '#000000', background: 'white'}}>
-                    <Typography sx={{fontWeight: 600, fontSize: '24px', lineHeight: '36px', width: '103px'}}>Call Now</Typography>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width:'100%', mt: 1}}>
+                <Button variant="contained" sx={{background: 'white', textTransform: 'none', height: 44, borderRadius: '12px', px: 3, color: '#FF5C00', boxShadow:'none', fontWeight: 700, mx:'auto'}}>
+                    <Typography sx={{fontWeight: 700, fontSize: '14px', fontFamily:'inter'}}>Call Now</Typography>
                 </Button>
-
             </Box>
 
             </Box>
